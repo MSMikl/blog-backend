@@ -3,35 +3,35 @@
 {% load static %}
 
 {% block title %}
-  <title>{{post.title}} - Blog Details</title>
+	<title>{{post.title}} - Blog Details</title>
 {% endblock %}
 
 {% block content %}
-  <!--================Header Menu Area =================-->
-  
-  <!--================ Hero sm Banner start =================-->      
-  <section class="mb-30px">
-    <div class="container">
-      <div class="hero-banner hero-banner--sm">
-        <div class="hero-banner__content">
+	<!--================Header Menu Area =================-->
+	
+	<!--================ Hero sm Banner start =================-->
+	<section class="mb-30px">
+		<div class="container">
+			<div class="hero-banner hero-banner--sm">
+				<div class="hero-banner__content">
 					<h1>Blog details</h1>
-          <nav aria-label="breadcrumb" class="banner-breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--================ Hero sm Banner end =================-->    
+					<nav aria-label="breadcrumb" class="banner-breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Blog Details</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ Hero sm Banner end =================-->
 
-  <!--================ Start Blog Post Area =================-->
-  <section class="blog-post-area section-margin">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8">
+	<!--================ Start Blog Post Area =================-->
+	<section class="blog-post-area section-margin">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
 					<div class="main_blog_details">
 						{% if post.image_url %}
 							<img class="img-fluid" src="{{post.image_url}}" alt="{{post.title}}">
@@ -60,8 +60,8 @@
 								<a href="#"><i class="fab fa-behance"></i></a>
 							</div>
 						</div>
-          </div>
-          <div class="comments-area">
+					</div>
+					<div class="comments-area">
 						<h4>{{post.comments|length}} Comments</h4>
 						{% for comment in post.comments %}
 							<div class="comment-list">
@@ -80,9 +80,9 @@
 									</div>
 								</div>
 							</div>
-						{% endfor %}                                                       				
-          </div>
-        </div>
+						{% endfor %}
+					</div>
+				</div>
  <!-- Start Blog Post Siddebar -->
 				<div class="col-lg-4 sidebar-widgets">
 					<div class="widget-wrap">
@@ -103,10 +103,10 @@
 						</div>
 					</div>
 				</div>
-          <!-- End Blog Post Siddebar -->
-      </div>
-    </div>
-  </section>
-  <!--================ End Blog Post Area =================-->
+	<!-- End Blog Post Siddebar -->
+			</div>
+		</div>
+	</section>
+	<!--================ End Blog Post Area =================-->
 
 {% endblock %}
